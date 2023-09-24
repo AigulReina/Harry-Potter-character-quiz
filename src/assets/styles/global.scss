@@ -36,8 +36,8 @@ a:hover {
 
 .header__logo {
     width: 25%;
-    margin-top: 29px;
-    margin-bottom: 70px;
+    margin-top: 1.8125rem;
+    margin-bottom: 4.375rem;
 }
 
 //MAIN
@@ -47,6 +47,7 @@ a:hover {
 }
 
 .wrapper {
+    min-height:100%; 
     @include vertical-flex;
 }
 
@@ -54,14 +55,14 @@ a:hover {
 
 .footer {
     @include vertical-flex;
-    gap: 30px;
-    padding: 30px 0;
+    gap: 1.875rem;
+    padding: 1.875rem 0;
     font-family: f.$plain-text;
     background-color: c.$bg-color-footer;
 }
 
 .footer__logo {
-    width: 170px;
+    width: 10.625rem;
 }
 
 .footer__authors {
@@ -73,7 +74,7 @@ a:hover {
 .footer__author {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 //РАМКА С ТЕКСТОМ
@@ -81,9 +82,9 @@ a:hover {
 .prompt {
     position: relative;
     width: 58%;
-    margin-bottom: 30px;
-    padding: 0 30px;
-    border-radius: 49px;
+    margin-bottom: 1.875rem;
+    padding: 0 1.875rem;
+    border-radius: 3.063rem;
     background-color: c.$bg-text;
 }
 
@@ -96,19 +97,71 @@ a:hover {
 
 .prompt__img {
     position: absolute;
-    width: 94px;
-    height: 94px;
+    width: 5.875rem;
+    height: 5.875rem;
 }
 
 .prompt__img--left {
-    top: -30px;
-    left: -50px;
+    top: -1.875rem;
+    left: -3.125rem;
 }
 
 .prompt__img--right {
-    bottom: -50px;
-    right: -30px;
+    bottom: -3.125rem;
+    right: -1.875rem;
 }
+
+// для экранов меньше 768px (mobile)
+@media (max-width: 768px) {
+    html,
+    body {
+        font-size: 0.875rem; /* базовый размер шрифта делаем поменьше  */
+    }
+    
+    .header__logo {
+        width: 50%; /* Уменьшаем ширину логотипа  */
+        // max-width: 100%;
+    }
+    
+    .wrapper {
+        width: 100%;
+    }
+    
+    .prompt {
+        width: 70%; /* ширина рамки  */
+        margin: 0.625rem 0; /* Уменьшаем отступы */
+        padding: 0 10px; /* Уменьшаем внутренний отступ */
+    }
+    .prompt__img {
+        position: absolute;
+        // max-width: 100%;
+        width: 3.875rem;
+        height: 3.875rem;
+    }
+    
+    .prompt__img--left {
+        top: -1rem;
+        left: -2rem;
+    }
+    
+    .prompt__img--right {
+        bottom: -2rem;
+        right: -1rem;
+    }
+}
+    .footer__text {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
 
 //КОНТЕЙНЕР, ЗАПОЛНЯЕМЫЙ JS
 

@@ -3,13 +3,20 @@
 @use '../../../assets/styles/mixins' as *;
 
 .start-button {
-    padding: 20px 100px;
+    padding: 1.25rem 6.25rem;
     @include btn-text;
     border: none;
-    border-radius: 88px;
+    border-radius: 5.5rem;
     background-color: c.$btn-color;
 }
 
 .start-button:hover {
     cursor: pointer;
+}
+
+// для экранов меньше 768px (mobile)
+@media (max-width: 768px) {
+    .start-button {
+    padding: 1.25rem 4.25rem;
+}
 }

@@ -4,10 +4,13 @@
 
 .result {
     width: 70%;
-    margin: 30px 0;
+    margin: 1.875rem auto; //Центрирую блок по горизонтали
+    padding: 1.875rem; // Отступы справа и слева
     padding-bottom: 50px;
-    border-radius: 88px;
+    border-radius: 5.5rem;
     background-color: c.$bg-text;
+    max-width: 100%; //максимальная ширина блока, чтобы он не выходил за пределы экрана
+    box-sizing: border-box;
 }
 
 .result__title {
@@ -21,4 +24,19 @@
     justify-content: space-around;
     font-family: f.$plain-text;
     font-size: 1.25rem;
+}
+
+//для экранов меньше 768px (mobile)
+@media screen and (max-width: 768px) {
+    .result {
+        width: 75vh;
+    }
+
+    .result__title {
+        font-size: 2rem;
+    }
+
+    .result__info {
+        font-size: 1rem;
+    }
 }

@@ -6,4 +6,8 @@
     @include vertical-flex;
     width: 100%;
     margin: 50px 0;
+//для экранов меньше 768px (mobile)
+@media (max-width: 768px) {
+    margin: 1.25rem 0; // уменьшаем верхний и нижний отступ 
+}
 }

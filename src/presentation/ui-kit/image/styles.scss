@@ -4,12 +4,13 @@
 
 //Изображение персонажа
 .character-img {
-    border-radius: 49px;
+    border-radius: 3.063rem;
     max-width: 40%;
 }
 
 //Изображение на начальной странице загрузки
 .cartoon-init {
-    width: 646px;
-    height: 228px;
+    width: 60vh;
+    z-index: 2;
+    margin-bottom: -1.5rem; //
 }
